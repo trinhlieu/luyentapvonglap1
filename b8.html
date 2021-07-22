@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <button type="button" onclick="play()">Play</button>
+    <button type="button" onclick="reset1()">Reset</button>
+    <div id="display"></div>
+</form>
+<script>
+    function play() {
+        let x = +prompt('Nhập dãy số từ:')
+        let y = +prompt('đến')
+        let z = Math.round(Math.random() * (y-x) + x);
+        for (let i = 1; i < 4; i++) {
+            let w = +prompt('Nhập số bạn đoán lần:' + i)
+            console.log(z)
+            if (z === w) {
+                document.getElementById('display').innerHTML = 'Chúc mừng';
+                break;
+            } else if (w > z)
+                alert('gợi ý : nhỏ hơn')
+            else
+                alert('gợi ý : lớn hơn')
+        }
+    }
+
+    function reset1() {
+        document.getElementById('display').innerHTML = '';
+    }
+</script>
+</body>
+</html>

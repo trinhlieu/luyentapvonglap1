@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=0
+    let x = 0
+    let y = 1
+    document.write(x + '<br>')
+    document.write(y + '<br>')
+    for (let numbers = 2; numbers < 20; numbers++) {
+        let z = x + y
+        document.write(z + '<br>')
+        x = y
+        y = z
+        a+=z
+    }
+    document.write("tong ="+a)
+</script>
+</body>
+</html>
